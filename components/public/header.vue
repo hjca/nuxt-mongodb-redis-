@@ -4,16 +4,20 @@
       <el-col :span="8">
         <no-login/>
       </el-col>
-      <el-col :span="16">2</el-col>
+      <el-col :span="16">
+        <header-menu/>
+      </el-col>
     </el-row>
   </div>
 </template>
 
 <script>
 import NoLogin from './nologin.vue';
+import HeaderMenu from './headerMenu.vue'
 export default {
   components: {
-    NoLogin
+    NoLogin,
+    HeaderMenu
   },
   data() {
     return {
