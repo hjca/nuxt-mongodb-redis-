@@ -1,3 +1,29 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?58itob');
+  src:  url('../fonts/icomoon.eot?58itob#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?58itob') format('truetype'),
+    url('../fonts/icomoon.woff?58itob') format('woff'),
+    url('../fonts/icomoon.svg?58itob#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -15,4 +41,48 @@
 }
 .el-icon--right{
   margin: 0;
+}
+
+.icon-whitwine:before {
+  content: "\e900";
+}
+.icon-editor:before {
+  content: "\e901";
+}
+.icon-QRcode:before {
+  content: "\e902";
+}
+.icon-shopcart:before {
+  content: "\e903";
+  font-size: 12px;
+}
+.icon-foreignwine:before {
+  content: "\e904";
+}
+.icon-beer:before {
+  content: "\e905";
+}
+.icon-customer:before {
+  content: "\e906";
+  color: #666767;
+}
+.icon-grapewine:before {
+  content: "\e907";
+  color: #4c3800;
+}
+.icon-love:before {
+  content: "\e908";
+}
+.icon-phone:before {
+  content: "\e909";
+  color: #e61d15;
+}
+.icon-server:before {
+  content: "\e90a";
+}
+.icon-mine:before {
+  content: "\e90b";
+}
+.icon-up:before {
+  content: "\e90c";
 }
