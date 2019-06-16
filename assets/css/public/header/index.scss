@@ -17,4 +17,13 @@
       height: 100%;
     }
   }
+  .default-header-advertising{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    background: url(http://img09.jiuxian.com/bill/2019/0608/eb9808cf23254f6095df2027e4b8758a.jpg) no-repeat center;
+    background-size: 144% 100%;
+  }
 }

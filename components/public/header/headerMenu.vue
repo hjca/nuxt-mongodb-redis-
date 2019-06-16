@@ -52,16 +52,17 @@
         <i class="el-icon-caret-bottom el-icon--right"/>
       </span>
       <el-dropdown-menu slot="dropdown" class="default-menu-style">
-        <el-dropdown-item class="default-menu-style-item">
-          <nuxt-link to="/">我的订单</nuxt-link>
-        </el-dropdown-item>
-
-        <el-dropdown-item class="default-menu-style-item">
-          <nuxt-link to="/">物流跟踪</nuxt-link>
-        </el-dropdown-item>
-
-        <el-dropdown-item class="default-menu-style-item">
-          <nuxt-link to="/">我的优惠券</nuxt-link>
+        <el-dropdown-item
+          v-for="(item,index) in intentMenu"
+          :key="index"
+          class="default-menu-style-item default-menu-intent">
+          <h5>{{ item.menuTitle }}</h5>
+          <div class="menu-item-data">
+            <nuxt-link 
+              v-for="(val,ind) in item.menuArr"
+              :key="ind"
+              :to="val.url">{{ val.name }}</nuxt-link>
+          </div>
         </el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
@@ -75,15 +76,15 @@
       </span>
       <el-dropdown-menu slot="dropdown" class="default-menu-style">
         <el-dropdown-item class="default-menu-style-item">
-          <nuxt-link to="/">我的订单</nuxt-link>
+          <nuxt-link to="/">常见问题</nuxt-link>
         </el-dropdown-item>
 
         <el-dropdown-item class="default-menu-style-item">
-          <nuxt-link to="/">物流跟踪</nuxt-link>
+          <nuxt-link to="/">配送说明</nuxt-link>
         </el-dropdown-item>
 
         <el-dropdown-item class="default-menu-style-item">
-          <nuxt-link to="/">我的优惠券</nuxt-link>
+          <nuxt-link to="/">售后服务</nuxt-link>
         </el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
@@ -100,7 +101,97 @@
 export default {
   data() {
     return {
-      cartNum:0
+      cartNum:0,
+      intentMenu: [
+        {
+          menuTitle: '购物',
+          menuArr: [
+            {
+              id: '0',
+              name: '白酒',
+              url: '/'
+            },{
+              id: '1',
+              name: '葡萄酒',
+              url: '/'
+            },{
+              id: '2',
+              name: '洋酒',
+              url: '/'
+            },{
+              id: '3',
+              name: '啤酒',
+              url: '/'
+            },{
+              id: '4',
+              name: '保健酒',
+              url: '/'
+            },{
+              id: '5',
+              name: '黄酒',
+              url: '/'
+            }
+          ] 
+        },{
+          menuTitle: '活动',
+          menuArr: [
+            {
+              id: '0',
+              name: '口粮专场',
+              url: '/'
+            },{
+              id: '1',
+              name: '进口馆',
+              url: '/'
+            },{
+              id: '2',
+              name: '酒鬼酒',
+              url: '/'
+            },{
+              id: '3',
+              name: '老酒特卖',
+              url: '/'
+            },{
+              id: '4',
+              name: '新品发现',
+              url: '/'
+            },{
+              id: '5',
+              name: '值得买',
+              url: '/'
+            }
+          ] 
+        },{
+          menuTitle: '其他',
+          menuArr: [
+            {
+              id: '0',
+              name: '会员中心',
+              url: '/'
+            },{
+              id: '1',
+              name: '社区',
+              url: '/'
+            },{
+              id: '2',
+              name: '常见问题',
+              url: '/'
+            },{
+              id: '3',
+              name: '招商入驻',
+              url: '/'
+            },{
+              id: '4',
+              name: '酒类资讯',
+              url: '/'
+            },{
+              id: '5',
+              name: 'VIP注册',
+              url: '/'
+            }
+          ] 
+        }
+      ]
     }
   },
   components: {

@@ -8,6 +8,9 @@
         <header-menu/>
       </el-col>
     </el-row>
+
+    <!-- 广告 -->
+    <nuxt-link class="default-header-advertising" to="/" />
   </div>
 </template>
 

@@ -11,10 +11,16 @@
 </template>
 
 <script>
-  import BeerHeader from '@/components/public/header.vue'
+  import BeerHeader from '@/components/public/header/header.vue'
   export default {
     components: {
       BeerHeader
     }
   }
 </script>
+
+<style lang="scss">
+  .el-header{
+    height: auto!important;
+  }
+</style>
