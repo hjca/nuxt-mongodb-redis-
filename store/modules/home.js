@@ -1,25 +1,19 @@
-const state = () => ({
-  advertis: false
-})
-
-const mutations = {
-  setHeaderAdver(state, booleanV) {
-    state.advertis = booleanV;
+const home = {
+  state: {
+    advertis: false
+  },
+  actions: {
+    setHeaderAdver({
+      commit
+    },val){
+      commit("SET_HEADER_ADVER",val)
+    }
+  },
+  mutations: {
+    SET_HEADER_ADVER(state, booleanV) {
+      state.advertis = booleanV;
+    }
   }
 }
 
-const actions = {
-  setHeaderAdver: ({
-    commit
-  },val) => {
-    console.log(val)
-    commit("setHeaderAdver",val)
-  }
-}
-
-export default {
-  namespaced: true,
-  state,
-  mutations,
-  actions
-}
+export default home;

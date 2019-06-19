@@ -1,9 +1,10 @@
-import store from '../store';
-export default ({ app }) => {
+export default ({ app,store }) => {
   app.router.afterEach((to, next) => {
-    // to.path == '/' ?
-    // store
-    // .dispatch("setHeaderAdver",true) : '';
-    console.log(store)
+    to.path == '/' ?
+    store
+    .commit("SET_HEADER_ADVER",true) : 
+    store
+    .commit("SET_HEADER_ADVER",false);
+    // actions.setHeaderAdver(store,false)
   })
 }
