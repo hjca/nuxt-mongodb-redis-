@@ -88,7 +88,7 @@ export default {
   methods: {}
 }
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .beer-header-navbar{
   height: 100%;
   display: flex;

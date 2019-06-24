@@ -4,14 +4,19 @@
     <div class="home-swiper-area">
       <swiper-comp/>
     </div>
+
+    <!-- 侧边栏 -->
+    <side-menu-list/>
   </div>
 </template>
 
 <script>
 import SwiperComp from '@/components/index/swiperComp.vue';
+import SideMenuList from '@/components/index/sideMenu.vue';
 export default {
   components: {
-    SwiperComp
+    SwiperComp,
+    SideMenuList
   }
 }
 </script>

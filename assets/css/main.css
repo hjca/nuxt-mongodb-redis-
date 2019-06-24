@@ -66,6 +66,7 @@
 .icon-shopcart:before {
   content: "\e903";
   font-size: 16px;
+  color: #ffffff;
 }
 .icon-foreignwine:before {
   content: "\e904";
@@ -75,7 +76,7 @@
 }
 .icon-customer:before {
   content: "\e906";
-  color: #666767;
+  color: #fff;
 }
 .icon-grapewine:before {
   content: "\e907";
@@ -83,6 +84,7 @@
 }
 .icon-love:before {
   content: "\e908";
+  color: #ffffff;
 }
 .icon-phone:before {
   content: "\e909";
@@ -93,6 +95,7 @@
 }
 .icon-mine:before {
   content: "\e90b";
+  color: #ffffff;
 }
 .icon-up:before {
   content: "\e90c";
