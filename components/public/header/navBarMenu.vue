@@ -3,7 +3,7 @@
   <div class="beer-header-navbar">
     <div class="allClassfiy">
       全部分类
-      <classify-menu/>
+      <classify-menu v-show="$store.state.home.advertis"/>
     </div>
     <nuxt-link 
       v-for="(item,index) in navBarMenu" 

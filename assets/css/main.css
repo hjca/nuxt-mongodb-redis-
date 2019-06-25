@@ -100,3 +100,15 @@
 .icon-up:before {
   content: "\e90c";
 }
+.icon-order:before {
+  content: "\e90d";
+}
+.icon-member:before {
+  content: "\e90e";
+}
+.icon-coupon:before {
+  content: "\e90f";
+}
+.icon-logistics:before {
+  content: "\e910";
+}
