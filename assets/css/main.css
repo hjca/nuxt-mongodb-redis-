@@ -53,15 +53,21 @@
 .el-icon--right{
   margin: 0;
 }
+.el-popover a{
+  color: #666666;
+  font-size: 12px;
+}
 
 .icon-whitwine:before {
   content: "\e900";
 }
 .icon-editor:before {
   content: "\e901";
+  font-size: 18px;
 }
 .icon-QRcode:before {
   content: "\e902";
+  font-size: 16px;
 }
 .icon-shopcart:before {
   content: "\e903";
@@ -99,6 +105,7 @@
 }
 .icon-up:before {
   content: "\e90c";
+  font-size: 20px;
 }
 .icon-order:before {
   content: "\e90d";

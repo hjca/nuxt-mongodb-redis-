@@ -1,6 +1,6 @@
 <!-- 分来菜单 -->
 <template>
-  <div class="public-classify-menu">
+  <div class="public-classify-menu" @mouseleave="leaveMenu">
     <div 
       v-for="(item, index) in menuClassify"
       :key="index"
@@ -374,11 +374,14 @@ export default {
   methods: {
     // 鼠标滑过全部分类下的菜单时，出现右侧菜单
     enter(typename) {
-      console.log(typename)
       this.typeMenu = typename ? typename : ''
     },
     // 鼠标移开菜单也
     sout() {
+      this.typeMenu = ''
+    },
+    // 鼠标移开菜单
+    leaveMenu() {
       this.typeMenu = ''
     }
   }

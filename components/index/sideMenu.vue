@@ -1,6 +1,6 @@
 <!-- 侧边栏菜单 -->
 <template>
-  <div class="beer-side-menu-list">
+  <div class="beer-side-menu-list" @mouseenter="otherMenu">
     <!-- 我 -->
     <div class="beerUser default-side-menu">
       <div 
@@ -87,7 +87,7 @@
     </div>
 
     <!-- 购物车 -->
-    <div class="shopCart default-side-menu">
+    <div class="shopCart default-side-menu" @mouseenter="otherMenu">
       <div class="icon-area">
         <i class="icon-shopcart"/>
       </div>
@@ -97,7 +97,7 @@
     </div>
 
     <!-- 客服 -->
-    <div class="shopCart default-side-menu">
+    <div class="shopCart default-side-menu" @mouseenter="otherMenu">
       <div class="icon-area">
         <i class="icon-customer"/>
       </div>
@@ -105,15 +105,26 @@
     </div>
 
     <!-- code区域 -->
-    <div class="beer-code-server">
+    <div class="beer-code-server" @mouseenter="otherMenu">
+
+      <!-- 用户反馈 -->
       <el-popover
-        placement="top-start"
-        title="标题"
-        width="200"
-        trigger="hover"
-        content="这是一段内容,这是一段内容,这是一段内容,这是一段内容。">
-      <el-button slot="reference">hover 激活</el-button>
-  </el-popover>
+        placement="left"
+        trigger="hover">
+        <nuxt-link to="/">用户反馈</nuxt-link>
+        <i class="icon-editor" slot="reference"/>
+      </el-popover>
+
+      <!-- 二维码 -->
+      <el-popover
+        placement="left"
+        trigger="hover">
+        <img src="http://misc.jiuxian.com/img/newIndexImg/jxPho-code.jpg" alt="">
+        <i class="icon-QRcode" slot="reference"/>
+      </el-popover>
+
+      <!-- 滑到顶部 -->
+      <span class="icon-up" @click.stop="pageTop"></span>
     </div>
   </div>
 </template>
@@ -165,15 +176,28 @@ export default {
       this.mineType = 1
       this.collectionType = ''
     },
+    // 鼠标离开“我”的时候
     soutMine() {
       this.mineType = ''
     },
+    // 鼠标滑过“收藏”的时候
     enterCollection() {
       this.collectionType = 1
       this.mineType = ''
     },
+    // 鼠标离开“收藏”的时候
     soutCollection() {
+      console.log('进来')
       this.collectionType = ''
+    },
+    // 鼠标滑过其他菜单和侧边栏的时候
+    otherMenu() {
+      this.mineType = ''
+      this.collectionType = ''
+    },
+    // 页面滑到顶部
+    pageTop() {
+      window.scrollTo(0,0)
     }
   }
 }
@@ -357,7 +381,7 @@ export default {
     font-size: 26px;
   }
   .collection {
-    .beer-side-user-mark{
+    .beer-side-user-mark {
       height: auto;
     }
     .beer-side-login-mark {
@@ -393,6 +417,27 @@ export default {
     left: 0;
     bottom: 40px;
     overflow: hidden;
+    .icon-up{
+      color: #666666;
+    }
+    span{
+      height: 32px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    span:hover{
+      background: #c00;
+      color: #fff;
+    }
+    span:hover i{
+      color: #ffffff;
+    }
+    .icon-up:hover{
+      color: #fff;
+    }
   }
 }
 </style>
