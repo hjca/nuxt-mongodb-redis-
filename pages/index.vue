@@ -11,7 +11,23 @@
         <img :src="leftImg">
       </el-col>
       <el-col :span="18">
+
+        <!-- table切换 -->
         <menu-beer-comp/>
+
+        <!-- 广告 -->
+        <div class="home-table-adver">
+          <nuxt-link 
+            v-for="(item,index) in adverImg"
+            :key="index"
+            to="/">
+            <img :src="item.img" alt="">
+          </nuxt-link>
+        </div>
+
+        <!-- 优惠推荐 -->
+        <div class="home-table-recommend"></div>
+
       </el-col>
       <el-col :span="3" class="home-table-menu-right-adver">
         <img :src="rightImg">
@@ -36,7 +52,21 @@ export default {
   data() {
     return {
       leftImg: 'http://img09.jiuxian.com/bill/2019/0625/2eb9d3e967ba43d99247534054ca1766.png',
-      rightImg: 'http://img07.jiuxian.com/bill/2019/0625/675792ccc09a45db9a5094d2e3a97bb1.png'
+      rightImg: 'http://img07.jiuxian.com/bill/2019/0625/675792ccc09a45db9a5094d2e3a97bb1.png',
+      adverImg:[
+        {
+          id: 0,
+          img: 'http://img08.jiuxian.com/bill/2019/0325/292cfb34eabd4245a99022454342aa94.png'
+        },
+        {
+          id: 1,
+          img: 'http://img07.jiuxian.com/bill/2019/0622/4ad0c47eef32419db642a816fde0effe.png'
+        },
+        {
+          id: 2,
+          img: 'http://img08.jiuxian.com/bill/2019/0628/99c0be3326fd47e78102011734bb215e.png'
+        }
+      ]
     }
   }
 }
@@ -64,6 +94,29 @@ export default {
       img{
         float: right;
       }
+    }
+    .home-table-adver{
+      width: 100%;
+      height: 110px;
+      margin-top: 20px;
+      overflow: hidden;
+      background: #ffffff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      a{
+        width: auto;
+        height: auto;
+        img{
+          width: 290px;
+          height: 126px;
+        }
+      }
+    }
+    .home-table-recommend{
+      width: 100%;
+      height: 257px;
+      margin-top: 20px;
     }
   }
 }
