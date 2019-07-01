@@ -1,4 +1,4 @@
-const menuList = [
+export const menuList = [
   {
     id: 0,
     title: '疯狂抢购',
@@ -489,4 +489,179 @@ const menuList = [
   }
 ]
 
-export default menuList
+export const recommendList = [
+  {
+    child: [
+      {
+        shopId: 0,
+        shopName: '45°古井大曲250ml（6瓶装）',
+        price: '36.00',
+        shopImg:
+          'http://img08.jximage.com/2017/0317/38cf9dfd1f3a4b3bb95a19f3f72a1b002.jpg',
+        shopType: false,
+        typeName: ''
+      },
+      {
+        shopId: 1,
+        shopName: '58°五粮液（股份）火爆精酿小酒100ml  浓香型',
+        price: '58.00',
+        shopImg:
+          'http://img08.jximage.com/2019/0319/efb5741c20aa49bda549a32883fdf4562.jpg',
+        shopType: false,
+        typeName: ''
+      },
+      {
+        shopId: 2,
+        shopName: '【酒仙甄选】52°五粮液股份公司兴隆纯酿浓香型婚宴白酒整箱500ml*6瓶',
+        price: '158.00',
+        shopImg:
+          'http://img08.jximage.com/2019/0523/9821d9b480e04324ac4717d4cacee2462.jpg',
+        shopType: false,
+        typeName: ''
+      },
+      {
+        shopId: 3,
+        shopName: '54°宝丰荣耀1000ml（献礼版）',
+        price: '69.00',
+        shopImg:
+          'http://img08.jximage.com/2015/0811/03cf638405bb4ae495f968ad8c6e1c462.jpg',
+        shopType: false,
+        typeName: ''
+      },
+      {
+        shopId: 4,
+        shopName: '【酒仙甄选】53°郑酒师 纯坤沙 酱香型白酒 固态纯粮 白酒整箱500ml*4',
+        price: '472.00',
+        shopImg:
+          'http://img08.jximage.com/2019/0307/31d6933ebd914b178e19c770d168a8dc2.jpg',
+        shopType: false,
+        typeName: ''
+      },
+      {
+        shopId: 5,
+        shopName: '澳洲整箱红酒澳大利亚黄尾袋鼠加本力苏维翁红葡萄酒（6瓶装）',
+        price: '248.00',
+        shopImg:
+          'http://img08.jximage.com/2017/0121/699352b5853a4a44b88588ed08b0a65c2.jpg',
+        shopType: false,
+        typeName: ''
+      }
+    ]
+  },
+  {
+    child: [
+      {
+        shopId: 0,
+        shopName: '52°五粮液（股份）友酒•友义500ml  浓香型白酒',
+        price: '168.00',
+        shopImg:
+          'http://img09.jximage.com/2019/0603/5c047427aed54c2aa04461e258c597342.jpg',
+        shopType: false,
+        typeName: ''
+      },
+      {
+        shopId: 1,
+        shopName: '【官网专属】52°白水杜康己亥猪年纪念酒1000ml(金装版）（2坛装）',
+        price: '129.00',
+        shopImg:
+          'http://img09.jximage.com/2019/0522/7e607559ffb14a1fb843a96faee15e932.jpg',
+        shopType: false,
+        typeName: ''
+      },
+      {
+        shopId: 2,
+        shopName: '52°酒鬼酒珍藏特酿500ml（6瓶装）',
+        price: '1398.00',
+        shopImg:
+          'http://img09.jximage.com/2017/1116/b53eaf14596a466c9f79d2fa2b3623e52.jpg',
+        shopType: false,
+        typeName: ''
+      },
+      {
+        shopId: 3,
+        shopName: '52°洋河特曲（珠光金）500ml（双瓶装）+景德镇青瓷酒具',
+        price: '279.00',
+        shopImg:
+          'http://img09.jximage.com/2018/1206/71eb9ead858443218631bccee8fd70982.jpg',
+        shopType: true,
+        typeName: '爆款<br/>推荐'
+      },
+      {
+        shopId: 4,
+        shopName: '【礼盒】澳洲丁戈树赤霞珠干红葡萄酒豪华双支皮盒套装',
+        price: '298.00',
+        shopImg:
+          'http://img09.jximage.com/2019/0312/03c52361be1a495a8353a07fce0aa37b2.jpg',
+        shopType: true,
+        typeName: ''
+      },
+      {
+        shopId: 5,
+        shopName: '法国（原装原瓶进口）雄鹿伯爵干红葡萄酒750ml（6瓶装）',
+        price: '179.00',
+        shopImg:
+          'http://img09.jximage.com/2017/1211/c00d337a13174c3fb7f8d5202a1162382.jpg',
+        shopType: false,
+        typeName: ''
+      }
+    ]
+  },
+  {
+    child: [
+      {
+        shopId: 0,
+        shopName: '52°泸州老窖特曲500ml+52°泸州老酒坊迎天喜500ml',
+        price: '238.00',
+        shopImg:
+          'http://img06.jiuxian.com/2018/1109/0f3f0b8bab7a4a6aa885d2a1678ccd962.jpg',
+        shopType: true,
+        typeName: '用劵<br/>更优惠'
+      },
+      {
+        shopId: 1,
+        shopName: '54°鸭溪窖酒500ml（双瓶装）',
+        price: '129.00',
+        shopImg:
+          'http://img06.jiuxian.com/2016/1028/8959f513c77f4a81b454ef60633f00b72.jpg',
+        shopType: true,
+        typeName: '爆款<br/>热卖'
+      },
+      {
+        shopId: 2,
+        shopName: '【52°西凤丝路明珠品藏级500ml*2',
+        price: '78.00',
+        shopImg:
+          'http://img06.jiuxian.com/2019/0520/1e9b5c8aede847cc9d7c383e844464e82.jpg',
+        shopType: false,
+        typeName: ''
+      },
+      {
+        shopId: 3,
+        shopName: '53°黄盖玻瓶汾酒475ml',
+        price: '43.00',
+        shopImg:
+          'http://img06.jiuxian.com/2015/0922/6531ff35cdef4070a1e6af4e4246e19c2.jpg',
+        shopType: false,
+        typeName: ''
+      },
+      {
+        shopId: 4,
+        shopName: '澳大利亚红酒小海龟西拉红葡萄酒750ml',
+        price: '89.00',
+        shopImg:
+          'http://img06.jiuxian.com/2016/0108/d4abc45efae144eaa805d824fb58e8c12.jpg',
+        shopType: false,
+        typeName: ''
+      },
+      {
+        shopId: 5,
+        shopName: '澳洲红酒澳大利亚丁戈树赤霞珠干红葡萄酒750ml',
+        price: '139.00',
+        shopImg:
+          'http://img06.jiuxian.com/2019/0312/c7f97d0767eb4da3a363c5f67645075f2.jpg',
+        shopType: false,
+        typeName: ''
+      }
+    ]
+  }
+]

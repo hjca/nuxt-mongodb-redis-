@@ -187,7 +187,6 @@ export default {
     },
     // 鼠标离开“收藏”的时候
     soutCollection() {
-      console.log('进来')
       this.collectionType = ''
     },
     // 鼠标滑过其他菜单和侧边栏的时候

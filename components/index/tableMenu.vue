@@ -46,7 +46,7 @@
 
 <script>
 import SwiperComp from '@/components/public/swiper/swiper.vue';
-import menuList from '@/assets/util/util.js';
+import { menuList } from '@/assets/util/util.js';
 import ShopItemComp from '@/components/public/shopItem/shopItem.vue';
 export default {
   name: '',

@@ -84,6 +84,17 @@ html,body{
   color: #c00;
   border-top-color: #c00;
 }
+.public-swiper-classify .el-carousel__indicator--horizontal{
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0 4px;
+}
+.public-swiper-classify  .is-active{
+  background: #fc5422;
+}
 
 .el-icon--right{
   margin: 0;

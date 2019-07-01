@@ -26,12 +26,23 @@
         </div>
 
         <!-- 优惠推荐 -->
-        <div class="home-table-recommend"></div>
+        <div class="home-table-recommend">
+          <menu-recoun-comp/>
+        </div>
 
       </el-col>
       <el-col :span="3" class="home-table-menu-right-adver">
         <img :src="rightImg">
       </el-col>
+    </el-row>
+
+    <!-- 酒瓶分类 -->
+    <el-row class="home-beer-classify-item">
+      <el-col :span="3">1</el-col>
+      <el-col :span="18">
+        <beer-home-classify/>
+      </el-col>
+      <el-col :span="3">3</el-col>
     </el-row>
 
     <!-- 侧边栏 -->
@@ -43,11 +54,15 @@
 import SwiperComp from '@/components/index/swiperComp.vue';
 import SideMenuList from '@/components/index/sideMenu.vue';
 import MenuBeerComp from '@/components/index/tableMenu.vue';
+import MenuRecounComp from '@/components/index/recommend.vue';
+import BeerHomeClassify from '@/components/index/beerClassify.vue';
 export default {
   components: {
     SwiperComp,
     SideMenuList,
-    MenuBeerComp
+    MenuBeerComp,
+    MenuRecounComp,
+    BeerHomeClassify
   },
   data() {
     return {
@@ -82,7 +97,8 @@ export default {
     margin-bottom: 10px;
   }
   .home-table-menu{
-    height: 1000px;
+    height: 920px;
+    overflow: hidden;
     .home-table-menu-left-adver,
     .home-table-menu-right-adver{
       overflow: hidden;
@@ -118,6 +134,10 @@ export default {
       height: 257px;
       margin-top: 20px;
     }
+  }
+  .home-beer-classify-item{
+    height: auto;
+    margin-top: 20px;
   }
 }
 </style>
