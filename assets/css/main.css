@@ -95,6 +95,9 @@ html,body{
 .public-swiper-classify  .is-active{
   background: #fc5422;
 }
+.registered-input-area .el-checkbox__input.is-checked+.el-checkbox__label{
+  color: #999999!important;
+}
 
 .el-icon--right{
   margin: 0;
