@@ -102,7 +102,7 @@ export default {
         againpassword: [{ validator: validateAgainPass, trigger: 'blur' }]
       },
       buttonText: '发送邮箱验证码',
-      secound: 10, //发送邮箱倒计时
+      secound: 120, //发送邮箱倒计时
       timer: 0, //时间定时器
       isDisabled: false,
       checked: true

@@ -1,7 +1,7 @@
 <template>
   <div class="beer-login-no">
     <span class="beer-title-text">欢迎来酒仙网！</span>
-    <nuxt-link to="/">请登录</nuxt-link>
+    <nuxt-link to="/login">请登录</nuxt-link>
     <nuxt-link to="/login/registered">免费注册</nuxt-link>
   </div>
 </template>

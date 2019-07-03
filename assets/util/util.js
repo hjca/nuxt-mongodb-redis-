@@ -665,3 +665,13 @@ export const recommendList = [
     ]
   }
 ]
+
+
+// 提示框
+export function alertMessage(that,typeAlert,message) {
+  that.$message({
+    message: message,
+    type: type,
+    duration:2000
+  });
+}
