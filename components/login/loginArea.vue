@@ -10,18 +10,19 @@
         </template>
       </el-input>
 
-      <el-input placeholder="密码" v-model="userpassword">
+      <el-input type="password" placeholder="密码" v-model="userpassword">
         <template slot="prepend">
           <i class="el-icon-s-cooperation"></i>
         </template>
       </el-input>
 
-      <el-button type="danger">登录</el-button>
+      <el-button type="danger" @click="login">登录</el-button>
     </div>
   </div>
 </template>
 
 <script>
+import CryptoJS from 'crypto-js'
 export default {
   name: '',
   data() {
@@ -37,7 +38,34 @@ export default {
 
   mounted() {},
 
-  methods: {}
+  methods: {
+    // 登录
+    login() {
+      let that = this
+      if (!that.userAccount) {
+        that.$message.error('请输入账号')
+      } else if (!that.userpassword) {
+        that.$message.error('请输入密码')
+      } else {
+        that.$axios
+          .post('/users/login', {
+            username: window.encodeURIComponent(that.userAccount),
+            password: CryptoJS.MD5(that.userpassword).toString()
+          })
+          .then(({ status, data }) => {
+            if (status === 200) {
+              if (data && data.code === 0) {
+                location.href = '/'
+              } else {
+                that.$message.error(data.msg)
+              }
+            } else {
+              that.$message.error(`服务器出错`)
+            }
+          })
+      }
+    }
+  }
 }
 </script>
 <style lang="scss">
@@ -63,10 +91,10 @@ export default {
   .login-input-area {
     flex: 1;
     width: 270px;
-    .el-input{
+    .el-input {
       margin-bottom: 20px;
     }
-    .el-button{
+    .el-button {
       width: 270px;
       height: 40px;
       background: #e10303;
