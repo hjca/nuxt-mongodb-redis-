@@ -27,6 +27,7 @@ export default {
   align-items: center;
   font-size: 12px;
   color: #999999;
+  padding-left: 110px;
   .beer-title-text{
     margin-right: 6px;
     display: flex;

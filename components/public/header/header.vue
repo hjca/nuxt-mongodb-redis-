@@ -2,7 +2,10 @@
   <div class="beer-header">
     <el-row>
       <el-col :span="8">
-        <no-login/>
+        <no-login v-if="!isLogin"/>
+        <yes-login 
+          v-else-if="isLogin"
+          :user-info="user"/>
       </el-col>
       <el-col :span="16">
         <header-menu/>
@@ -34,6 +37,7 @@
 
 <script>
 import NoLogin from './nologin.vue';
+import YesLogin from './yesLogin';
 import HeaderMenu from './headerMenu.vue'
 import SearchArea from './searcharea.vue'
 import NavBarMenu from './navBarMenu'
@@ -42,11 +46,20 @@ export default {
     NoLogin,
     HeaderMenu,
     SearchArea,
-    NavBarMenu
+    NavBarMenu,
+    YesLogin
   },
   data() {
     return {
-
+      isLogin: false,
+      user: {}
+    }
+  },
+  async mounted () {
+    const {status,data} = await this.$axios.get('/users/getUser')
+    if(status == 200) {
+      console.log(data)
+      this.user = data
     }
   }
 }

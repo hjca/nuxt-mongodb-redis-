@@ -52,7 +52,7 @@
 </template>
 
 <script>
-import CryptoJS from 'crypto-js';
+import CryptoJS from 'crypto-js'
 export default {
   name: '',
   data() {
@@ -167,34 +167,41 @@ export default {
                   that.buttonText = `已发送(${that.secound})`
                 }
               }, 1000)
-            }else {
-              that.$message.error(data.msg);
+            } else {
+              that.$message.error(data.msg)
             }
           })
       }
     },
     // 开始注册
     startRegistered() {
-      let that = this;
+      let that = this
       this.$refs['registeredForm'].validate(valid => {
-        if(valid){
-          that.$axios.post('/users/registered', {
-            username: window.encodeURIComponent(that.registeredForm.name),
-            password: CryptoJS.MD5(that.registeredForm.password).toString(),
-            email: that.registeredForm.email,
-            code: that.registeredForm.verification
-          }).then(({
-            status,
-            data
-          }) => {
-            if(status === 200) {
-              if(data && data.code === 0) {
-                location.href = '/login'
+        if (valid) {
+          that.$axios
+            .post('/users/registered', {
+              username: window.encodeURIComponent(that.registeredForm.name),
+              password: CryptoJS.MD5(that.registeredForm.password).toString(),
+              email: that.registeredForm.email,
+              code: that.registeredForm.verification
+            })
+            .then(({ status, data }) => {
+              if (status === 200) {
+                if (data && data.code === 0) {
+                  that.$message({
+                    message: data.msg,
+                    type: 'success',
+                    onClose() {
+                      location.href = '/login'
+                    }
+                  })
+                } else {
+                  that.$message.error(data.msg)
+                }
               }else{
-                that.$message.error(data.msg);
+                that.$message.error(`服务器出错，错误码：${status}`)
               }
-            }
-          })
+            })
         }
       })
     }
